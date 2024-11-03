@@ -66,7 +66,7 @@ export const effects = {
       });
       
       let reqOptions = {
-        url: "http://localhost:4500/sendEmail",
+        url: `${import.meta.env.VITE_APP_API_URL}/sendEmail`,
         method: "POST",
         headers: headersList,
         data: bodyContent,
