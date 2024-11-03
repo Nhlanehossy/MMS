@@ -1,0 +1,921 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+:root {
+  --text: #2c3e50; /* Dark text color */
+  --textLight: #ecf0f1; /* Light text color */
+  --textLighter: #a8a8a8; /* Lighter text color */
+  --textDark: #1a1a1a; /* Darker text color for better contrast */
+  --textDarker: #000000; /* Black text color */
+  --fill:#3C2312;
+
+  --cardLight: #ffffff; /* White card background */
+  --cardDark: #f9f9f9; /* Slightly off-white card background */
+
+  --background: #222222; /* White background */
+
+  --primary: #fcae1c; /* Orange color for primary elements */
+  --secondary: #fcae1c; /* White for secondary elements */
+  --tertiary: #000000; /* Black for tertiary elements */
+
+  --menubg: #2c3e50; /* Dark background for menus (can be adjusted) */
+  --vv: #222222;
+  --backgroundHover: #8d5b2f; /* Lighter orange for hover states */
+
+  --webPrimary: #fcae1c; /* Orange for web primary elements */
+  --webSecondary: #fcae1c; /* White for web secondary elements */
+  --webBackground: #ffffff; /* White for web background */
+  --webBackgroundDark: #1a1a1a; /* Darker background for web */
+
+  --webPrimaryHover: #8d5b2f; /* Hover color for web primary elements */
+  --webSecondaryHover: #f1f1f1; /* Light grey for web secondary hover */
+
+  --webBackgroundHover: #f9f9f9; /* Light background hover */
+  --webBackgroundDarkHover: #2c3e50; /* Dark background hover */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.ant-card-body{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.vvv{
+  z-index: 9999;
+}
+
+.common-text {
+  font-size: 16px; /* Set your desired font size */
+  font-weight: 500; /* Set your desired font weight */
+}
+
+body {
+  background-color: var(--background);
+  overflow-y: scroll;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 5px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--backgroundHover);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+.admin-top-bar {
+  background-color: var(--primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-top-bar .fa-bars {
+  font-size: 1.5rem;
+  color: var(--textLight);
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.admin-top-bar .fa-bars:hover {
+  color: var(--tertiary);
+  transform: scale(1.1);
+}
+
+.admin-top-bar .logo-container {
+  width: 3rem;
+  margin-left: 0.2rem;
+}
+
+.language-selector {
+  margin-right: 2.5rem;
+  color: var(--textLight);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.language-selector:hover {
+  color: var(--tertiary);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 25px;
+  padding: 0.3rem 1.25rem;
+}
+
+.profile-container:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.profile-image {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.25rem;
+  border: 2px solid var(--textLight);
+  transition: border-color 0.3s ease;
+}
+
+.profile-container:hover .profile-image {
+  border-color: var(--tertiary);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.profile-name {
+  color: var(--textLight);
+  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.profile-role {
+  font-size: 0.75rem;
+  color: var(--textLighter);
+  transition: color 0.3s ease;
+}
+
+.profile-container:hover .profile-role {
+  color: var(--tertiary);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    padding: 0.25rem 0.75rem;
+  }
+
+  .profile-image {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+  }
+
+  .profile-name {
+    display: none;
+  }
+
+  .profile-role {
+    font-size: 0.65rem;
+  }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 480px) {
+  .profile-container {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .profile-image {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.5rem;
+  }
+
+  .profile-name {
+    font-size: 0.75rem;
+  }
+
+  .profile-role {
+    display: none;
+  }
+}
+
+.side-bar {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-right: 0.04px solid var(--textLighter);
+}
+
+.admin-side-bar a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--tertiary);
+}
+
+.admin-side-bar.minimized {
+  width: 0px;
+}
+
+.admin-side-bar .menu-item-text {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.admin-side-bar.minimized .menu-item-text {
+  opacity: 0;
+  transform: translateX(10px);
+}
+
+.admin-side-bar .menu-icon {
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 18px;
+}
+
+.admin-side-bar.minimized .menu-icon {
+  margin-right: 0;
+}
+
+.menu-group-item {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--textLighter);
+  padding: 18px 22px;
+  display: block;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.menu-group-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--tertiary);
+}
+
+/* ... Rest of the CSS remains the same, but you can continue to modify other classes as needed ... */
+a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: var(--tertiary);
+  transform: translateY(-2px);
+}
+
+.card,
+.grid-item-b {
+  background-color: var(--cardLight);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  overflow: auto;
+  border: 1.5px solid var(--textLighter);
+}
+
+.card:hover,
+.grid-item-b:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+select {
+  padding: 14px;
+  margin-bottom: 22px;
+  border: 2px solid var(--cardDark);
+  background-color: var(--cardLight);
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+th,
+td {
+  border: none;
+  padding: 18px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+th {
+  background-color: var(--primary);
+  color: var(--textLight);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 13px;
+}
+
+tr {
+  background-color: var(--cardLight);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+tr:hover {
+  background-color: var(--cardDark);
+}
+
+td {
+  position: relative;
+}
+
+td::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+tr:hover td::before {
+  opacity: 1;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  font-size: 80%;
+  font-weight: 700;
+  line-height: 1;
+  background-color: var(--secondary);
+  color: var(--textLight);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 20px;
+  transition: background-color 0.15s ease-in-out, transform 0.2s ease;
+}
+
+.tag:hover {
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.action-icon:hover {
+  transform: scale(1.2);
+}
+
+.delete-icon {
+  color: var(--tertiary);
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.status-badge:hover {
+  transform: translateY(-2px);
+}
+
+.status-badge-success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.status-badge-warning {
+  background-color: #f39c12;
+  color: white;
+}
+
+.status-badge-danger {
+  background-color: var(--tertiary);
+  color: white;
+}
+
+.profile-drawer {
+  background-color: var(--cardLight);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 3;
+}
+
+.profile-content {
+  padding: 2.5rem;
+}
+
+.profile-header {
+  margin-bottom: 2.5rem;
+}
+
+.profile-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.profile-avatar {
+  border: 4px solid var(--primary);
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.profile-email,
+.profile-role {
+  color: var(--textDark);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 1.9em;
+  }
+  h3 {
+    font-size: 1.6em;
+  }
+  h4 {
+    font-size: 1.3em;
+  }
+  h5 {
+    font-size: 1.1em;
+  }
+  h6 {
+    font-size: 0.9em;
+  }
+}
+
+.custom-dropdown-menu {
+  min-width: 180px;
+  background-color: var(--cardLight);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.custom-menu-item {
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s;
+  color: var(--text);
+}
+
+.custom-menu-item:hover {
+  background-color: var(--cardDark);
+  color: var(--primary);
+}
+
+.delete-action {
+  margin-top: 10px;
+  border-top: 1px solid var(--cardDark);
+}
+
+.delete-action:hover {
+  background-color: #fce4e4;
+  color: var(--tertiary);
+}
+
+.dynamic-form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dynamic-form .min-w-\[16rem\] {
+  flex: 1 1 320px;
+}
+
+.dynamic-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: var(--textDark);
+}
+
+.dynamic-form .validation-error {
+  color: var(--tertiary);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.dynamic-form .tag {
+  background-color: var(--primary);
+  color: var(--textLight);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+  margin: 0.3rem;
+}
+
+.dynamic-form .tag:hover {
+  background-color: var(--backgroundHover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .dynamic-form {
+    padding: 1.75rem;
+  }
+
+  .dynamic-form .min-w-\[16rem\] {
+    flex-basis: 100%;
+  }
+}
+
+/* Additional styles for enhanced visual appeal */
+
+.card-header {
+  border-bottom: 2px solid var(--cardDark);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-footer {
+  border-top: 2px solid var(--cardDark);
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-box {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 4px solid var(--primary);
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+.warning-box {
+  background-color: rgba(241, 196, 15, 0.1);
+  border-left: 4px solid #f1c40f;
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+.error-box {
+  background-color: rgba(231, 76, 60, 0.1);
+  border-left: 4px solid var(--tertiary);
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+.success-box {
+  background-color: rgba(46, 204, 113, 0.1);
+  border-left: 4px solid var(--secondary);
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.5rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--textDark);
+  color: var(--textLight);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--cardDark);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.badge-primary {
+  background-color: var(--primary);
+  color: var(--textLight);
+}
+
+.badge-secondary {
+  background-color: var(--secondary);
+  color: var(--textLight);
+}
+
+.badge-tertiary {
+  background-color: var(--tertiary);
+  color: var(--textLight);
+}
+
+.avatar-group {
+  display: flex;
+}
+
+.avatar-group .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--cardLight);
+  margin-left: -10px;
+  transition: transform 0.3s ease;
+}
+
+.avatar-group .avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-group .avatar:hover {
+  transform: translateY(-5px);
+}
+
+.avatar-group .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25em 0.75em;
+  background-color: var(--cardDark);
+  border-radius: 16px;
+  font-size: 14px;
+  margin: 0.25em;
+  transition: background-color 0.3s ease;
+}
+
+.chip:hover {
+  background-color: var(--primary);
+  color: var(--textLight);
+}
+
+.chip .close {
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+.accordion {
+  border: 1px solid var(--cardDark);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background-color: var(--cardLight);
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: var(--cardDark);
+}
+
+.accordion-content {
+  padding: 1rem;
+  background-color: var(--background);
+  display: none;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--cardDark);
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: var(--cardDark);
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--cardLight);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--textDark);
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--tertiary);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pagination-item {
+  margin: 0 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-item:hover {
+  background-color: var(--cardDark);
+}
+
+.pagination-item.active {
+  background-color: var(--primary);
+  color: var(--textLight);
+}
+
+/* Add more custom styles as needed */
+.card-header {
+  border-bottom: 2px solid var(--cardDark);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-footer {
+  border-top: 2px solid var(--cardDark);
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-box {
+  background-color: rgba(108, 92, 231, 0.1);
+  border-left: 4px solid var(--primary);
+  padding: 1.5rem;
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.warning-box {
+  background-color: rgba(253, 203, 110, 0.1);
+  border-left: 4px solid #fdcb6e;
+  padding: 1.5rem;
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.warning-box:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.error-box {
+  background-color: rgba(255, 118, 117, 0.1);
+  border-left: 4px solid var(--tertiary);
+  padding: 1.5rem;
+  border-radius: 0 15px 15px 0;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.error-box:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}

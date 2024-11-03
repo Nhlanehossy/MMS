@@ -1,0 +1,936 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "price": 129.99,
+    "images": [
+      "https://picsum.photos/seed/headphones/300/200",
+      "https://picsum.photos/seed/headphones2/300/200",
+      "https://picsum.photos/seed/headphones3/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.5,
+    "number_of_reviews": 1200,
+    "sales_volume": 5000,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-01-15T12:00:00",
+    "brand": "AudioTech",
+    "materials_used": "Plastic, Metal",
+    "color": "Black",
+    "size": "One Size",
+    "features": [
+      "Noise-cancellation",
+      "Wireless",
+      "Bluetooth 5.0"
+    ],
+    "tags": [
+      "tech",
+      "audio",
+      "gadgets"
+    ],
+    "warranty_period": "2 years",
+    "return_rate": 2.5,
+    "user_satisfaction_index": 95,
+    "manufacturer_details": "AudioTech Inc.",
+    "views_count": 20000,
+    "CTR": 15,
+    "conversion_rate": 5.5,
+    "average_browsing_time": "3 mins",
+    "profit_margin": 25
+  },
+  {
+    "id": 2,
+    "name": "Men's Leather Jacket",
+    "description": "Stylish leather jacket for men, perfect for all seasons.",
+    "price": 199.99,
+    "images": [
+      "https://picsum.photos/seed/jacket/300/200",
+      "https://picsum.photos/seed/jacket2/300/200",
+      "https://picsum.photos/seed/jacket3/300/200"
+    ],
+    "category_id": 2,
+    "rating": 4.7,
+    "number_of_reviews": 850,
+    "sales_volume": 3200,
+    "stock_status": true,
+    "discount_percentage": 15,
+    "time_added": "2024-02-10T12:00:00",
+    "brand": "FashionWear",
+    "materials_used": "Leather",
+    "color": "Brown",
+    "size": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "features": [
+      "Stylish",
+      "All-season",
+      "Water-resistant"
+    ],
+    "tags": [
+      "fashion",
+      "men",
+      "clothing"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.8,
+    "user_satisfaction_index": 90,
+    "manufacturer_details": "FashionWear Inc.",
+    "views_count": 15000,
+    "CTR": 12,
+    "conversion_rate": 4.8,
+    "average_browsing_time": "2.5 mins",
+    "profit_margin": 30
+  },
+  {
+    "id": 3,
+    "name": "Smart Home Security Camera",
+    "description": "Wi-Fi enabled security camera with night vision and two-way audio.",
+    "price": 79.99,
+    "images": [
+      "https://picsum.photos/seed/camera/300/200",
+      "https://picsum.photos/seed/camera2/300/200",
+      "https://picsum.photos/seed/camera3/300/200"
+    ],
+    "category_id": 3,
+    "rating": 4.3,
+    "number_of_reviews": 2100,
+    "sales_volume": 7000,
+    "stock_status": true,
+    "discount_percentage": 5,
+    "time_added": "2024-03-05T12:00:00",
+    "brand": "HomeSafe",
+    "materials_used": "Plastic, Glass",
+    "color": "White",
+    "size": "Standard",
+    "features": [
+      "Night vision",
+      "Two-way audio",
+      "Wi-Fi enabled"
+    ],
+    "tags": [
+      "tech",
+      "security",
+      "home"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 3.2,
+    "user_satisfaction_index": 88,
+    "manufacturer_details": "HomeSafe Technologies",
+    "views_count": 25000,
+    "CTR": 18,
+    "conversion_rate": 6.1,
+    "average_browsing_time": "4 mins",
+    "profit_margin": 20
+  },
+  {
+    "id": 4,
+    "name": "Organic Face Cream",
+    "description": "All-natural face cream for hydration and anti-aging.",
+    "price": 34.99,
+    "images": [
+      "https://picsum.photos/seed/cream/300/200",
+      "https://picsum.photos/seed/cream2/300/200",
+      "https://picsum.photos/seed/cream3/300/200"
+    ],
+    "category_id": 4,
+    "rating": 4.8,
+    "number_of_reviews": 500,
+    "sales_volume": 4000,
+    "stock_status": true,
+    "discount_percentage": 0,
+    "time_added": "2024-04-20T12:00:00",
+    "brand": "NaturalBeauty",
+    "materials_used": "Organic ingredients",
+    "color": "White",
+    "size": "100 ml",
+    "features": [
+      "Hydration",
+      "Anti-aging",
+      "Organic"
+    ],
+    "tags": [
+      "beauty",
+      "organic",
+      "skincare"
+    ],
+    "warranty_period": "6 months",
+    "return_rate": 2.1,
+    "user_satisfaction_index": 92,
+    "manufacturer_details": "NaturalBeauty Corp.",
+    "views_count": 12000,
+    "CTR": 14,
+    "conversion_rate": 5.7,
+    "average_browsing_time": "2 mins",
+    "profit_margin": 35
+  },
+  {
+    "id": 5,
+    "name": "Yoga Mat",
+    "description": "Non-slip, eco-friendly yoga mat for all types of yoga.",
+    "price": 29.99,
+    "images": [
+      "https://picsum.photos/seed/yoga/300/200",
+      "https://picsum.photos/seed/yoga2/300/200",
+      "https://picsum.photos/seed/yoga3/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.6,
+    "number_of_reviews": 900,
+    "sales_volume": 2500,
+    "stock_status": true,
+    "discount_percentage": 8,
+    "time_added": "2024-05-30T12:00:00",
+    "brand": "EcoYoga",
+    "materials_used": "Eco-friendly rubber",
+    "color": "Green",
+    "size": "Standard",
+    "features": [
+      "Non-slip",
+      "Eco-friendly",
+      "Durable"
+    ],
+    "tags": [
+      "fitness",
+      "yoga",
+      "eco-friendly"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.5,
+    "user_satisfaction_index": 94,
+    "manufacturer_details": "EcoYoga Ltd.",
+    "views_count": 18000,
+    "CTR": 10,
+    "conversion_rate": 4.2,
+    "average_browsing_time": "2.8 mins",
+    "profit_margin": 22
+  },
+  {
+    "id": 5,
+    "name": "Yoga Mat",
+    "description": "Non-slip, eco-friendly yoga mat for all types of yoga.",
+    "price": 29.99,
+    "images": [
+      "https://picsum.photos/seed/yoga/300/200",
+      "https://picsum.photos/seed/yoga2/300/200",
+      "https://picsum.photos/seed/yoga3/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.6,
+    "number_of_reviews": 900,
+    "sales_volume": 2500,
+    "stock_status": true,
+    "discount_percentage": 8,
+    "time_added": "2024-05-30T12:00:00",
+    "brand": "EcoYoga",
+    "materials_used": "Eco-friendly rubber",
+    "color": "Green",
+    "size": "Standard",
+    "features": [
+      "Non-slip",
+      "Eco-friendly",
+      "Durable"
+    ],
+    "tags": [
+      "fitness",
+      "yoga",
+      "eco-friendly"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.5,
+    "user_satisfaction_index": 94,
+    "manufacturer_details": "EcoYoga Ltd.",
+    "views_count": 18000,
+    "CTR": 10,
+    "conversion_rate": 4.2,
+    "average_browsing_time": "2.8 mins",
+    "profit_margin": 22
+  },
+  {
+    "id": 13,
+    "name": "USB Charger",
+    "description": "Fast-charging USB-C charger for smartphones and tablets.",
+    "price": 19.99,
+    "images": [
+      "https://picsum.photos/seed/charger/300/200",
+      "https://picsum.photos/seed/charger2/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.2,
+    "number_of_reviews": 400,
+    "sales_volume": 2500,
+    "stock_status": true,
+    "discount_percentage": 5,
+    "time_added": "2024-09-01T12:00:00",
+    "brand": "ChargePro",
+    "materials_used": "Plastic, Metal",
+    "features": [
+      "Fast-charging",
+      "USB-C",
+      "Compact"
+    ],
+    "tags": [
+      "electronics",
+      "charger",
+      "smartphone"
+    ],
+    "warranty_period": "6 months",
+    "return_rate": 2.0,
+    "user_satisfaction_index": 85,
+    "manufacturer_details": "ChargePro Tech",
+    "views_count": 11000,
+    "CTR": 14,
+    "conversion_rate": 4.1,
+    "average_browsing_time": "2.0 mins",
+    "profit_margin": 22
+  },
+  {
+    "id": 14,
+    "name": "Winter Jacket",
+    "description": "Warm and insulated winter jacket for cold weather.",
+    "price": 129.99,
+    "images": [
+      "https://picsum.photos/seed/jacket/300/200",
+      "https://picsum.photos/seed/jacket2/300/200"
+    ],
+    "category_id": 2,
+    "rating": 4.7,
+    "number_of_reviews": 370,
+    "sales_volume": 900,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-09-05T09:00:00",
+    "brand": "WarmWear",
+    "materials_used": "Polyester, Down feathers",
+    "features": [
+      "Insulated",
+      "Warm",
+      "Water-resistant"
+    ],
+    "tags": [
+      "clothing",
+      "jacket",
+      "winter"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.2,
+    "user_satisfaction_index": 90,
+    "manufacturer_details": "WarmWear Co.",
+    "views_count": 10000,
+    "CTR": 11,
+    "conversion_rate": 4.3,
+    "average_browsing_time": "3.0 mins",
+    "profit_margin": 21
+  },
+  {
+    "id": 15,
+    "name": "Electric Kettle",
+    "description": "Quick-boil electric kettle with automatic shut-off.",
+    "price": 39.99,
+    "images": [
+      "https://picsum.photos/seed/kettle/300/200",
+      "https://picsum.photos/seed/kettle2/300/200"
+    ],
+    "category_id": 3,
+    "rating": 4.4,
+    "number_of_reviews": 600,
+    "sales_volume": 2000,
+    "stock_status": true,
+    "discount_percentage": 6,
+    "time_added": "2024-09-10T16:00:00",
+    "brand": "QuickHeat",
+    "materials_used": "Stainless steel, Plastic",
+    "features": [
+      "Quick-boil",
+      "Automatic shut-off",
+      "Stainless steel"
+    ],
+    "tags": [
+      "home",
+      "kettle",
+      "electric"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.5,
+    "user_satisfaction_index": 88,
+    "manufacturer_details": "QuickHeat Inc.",
+    "views_count": 16000,
+    "CTR": 10,
+    "conversion_rate": 4.0,
+    "average_browsing_time": "2.8 mins",
+    "profit_margin": 24
+  },
+  {
+    "id": 16,
+    "name": "Yoga Block Set",
+    "description": "Set of two foam yoga blocks for support and alignment.",
+    "price": 22.99,
+    "images": [
+      "https://picsum.photos/seed/block/300/200",
+      "https://picsum.photos/seed/block2/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.6,
+    "number_of_reviews": 320,
+    "sales_volume": 1200,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-09-15T11:00:00",
+    "brand": "FlexYoga",
+    "materials_used": "Foam",
+    "features": [
+      "Foam",
+      "Supportive",
+      "Lightweight"
+    ],
+    "tags": [
+      "yoga",
+      "fitness",
+      "support"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.0,
+    "user_satisfaction_index": 91,
+    "manufacturer_details": "FlexYoga Ltd.",
+    "views_count": 14000,
+    "CTR": 12,
+    "conversion_rate": 4.2,
+    "average_browsing_time": "2.4 mins",
+    "profit_margin": 25
+  },
+  {
+    "id": 17,
+    "name": "Leather Backpack",
+    "description": "Stylish leather backpack with multiple compartments.",
+    "price": 149.99,
+    "images": [
+      "https://picsum.photos/seed/backpack/300/200",
+      "https://picsum.photos/seed/backpack2/300/200"
+    ],
+    "category_id": 8,
+    "rating": 4.8,
+    "number_of_reviews": 500,
+    "sales_volume": 700,
+    "stock_status": true,
+    "discount_percentage": 15,
+    "time_added": "2024-09-20T08:00:00",
+    "brand": "LeatherCraft",
+    "materials_used": "Leather",
+    "features": [
+      "Leather",
+      "Multiple compartments",
+      "Durable"
+    ],
+    "tags": [
+      "backpack",
+      "leather",
+      "fashion"
+    ],
+    "warranty_period": "2 years",
+    "return_rate": 1.5,
+    "user_satisfaction_index": 94,
+    "manufacturer_details": "LeatherCraft Co.",
+    "views_count": 9500,
+    "CTR": 14,
+    "conversion_rate": 4.1,
+    "average_browsing_time": "3.0 mins",
+    "profit_margin": 20
+  },
+  {
+    "id": 18,
+    "name": "Solar Garden Lights",
+    "description": "Eco-friendly solar-powered garden lights for outdoor decoration.",
+    "price": 27.99,
+    "images": [
+      "https://picsum.photos/seed/lights/300/200",
+      "https://picsum.photos/seed/lights2/300/200"
+    ],
+    "category_id": 3,
+    "rating": 4.6,
+    "number_of_reviews": 390,
+    "sales_volume": 1400,
+    "stock_status": true,
+    "discount_percentage": 5,
+    "time_added": "2024-09-25T12:00:00",
+    "brand": "EcoBright",
+    "materials_used": "Plastic, Solar panel",
+    "features": [
+      "Solar-powered",
+      "Eco-friendly",
+      "Weather-resistant"
+    ],
+    "tags": [
+      "garden",
+      "outdoor",
+      "solar"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.0,
+    "user_satisfaction_index": 90,
+    "manufacturer_details": "EcoBright Ltd.",
+    "views_count": 11000,
+    "CTR": 11,
+    "conversion_rate": 4.2,
+    "average_browsing_time": "2.7 mins",
+    "profit_margin": 22
+  },
+  {
+    "id": 19,
+    "name": "Smart Home Hub",
+    "description": "Central hub for controlling smart home devices.",
+    "price": 89.99,
+    "images": [
+      "https://picsum.photos/seed/hub/300/200",
+      "https://picsum.photos/seed/hub2/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.5,
+    "number_of_reviews": 300,
+    "sales_volume": 600,
+    "stock_status": true,
+    "discount_percentage": 12,
+    "time_added": "2024-10-05T10:00:00",
+    "brand": "SmartControl",
+    "materials_used": "Plastic, Metal",
+    "features": [
+      "Smart home control",
+      "Compatible with multiple devices",
+      "Compact design"
+    ],
+    "tags": [
+      "home",
+      "smart",
+      "technology"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.3,
+    "user_satisfaction_index": 87,
+    "manufacturer_details": "SmartControl Inc.",
+    "views_count": 9500,
+    "CTR": 10,
+    "conversion_rate": 4.0,
+    "average_browsing_time": "2.6 mins",
+    "profit_margin": 19
+  },
+  {
+    "id": 20,
+    "name": "Kids Tablet",
+    "description": "Durable tablet with educational apps for children.",
+    "price": 119.99,
+    "images": [
+      "https://picsum.photos/seed/tablet/300/200",
+      "https://picsum.photos/seed/tablet2/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.4,
+    "number_of_reviews": 480,
+    "sales_volume": 1500,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-10-10T12:00:00",
+    "brand": "EduTech",
+    "materials_used": "Plastic, Glass",
+    "features": [
+      "Educational apps",
+      "Kid-friendly",
+      "Durable"
+    ],
+    "tags": [
+      "tablet",
+      "kids",
+      "education"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.4,
+    "user_satisfaction_index": 93,
+    "manufacturer_details": "EduTech Solutions",
+    "views_count": 13000,
+    "CTR": 13,
+    "conversion_rate": 4.2,
+    "average_browsing_time": "3.0 mins",
+    "profit_margin": 18
+  },
+  {
+    "id": 21,
+    "name": "Fitness Tracker",
+    "description": "Smart fitness tracker with heart rate monitoring and sleep tracking.",
+    "price": 69.99,
+    "images": [
+      "https://picsum.photos/seed/fitness-tracker/300/200",
+      "https://picsum.photos/seed/fitness-tracker2/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.6,
+    "number_of_reviews": 560,
+    "sales_volume": 2200,
+    "stock_status": true,
+    "discount_percentage": 8,
+    "time_added": "2024-10-10T11:00:00",
+    "brand": "FitTrack",
+    "materials_used": "Plastic, Rubber",
+    "features": [
+      "Heart rate monitoring",
+      "Sleep tracking",
+      "Water-resistant"
+    ],
+    "tags": [
+      "fitness",
+      "tracker",
+      "wearable"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.2,
+    "user_satisfaction_index": 90,
+    "manufacturer_details": "FitTrack Inc.",
+    "views_count": 15000,
+    "CTR": 10,
+    "conversion_rate": 4.1,
+    "average_browsing_time": "2.6 mins",
+    "profit_margin": 21
+  },
+  {
+    "id": 22,
+    "name": "Portable Blender",
+    "description": "Compact and rechargeable portable blender for smoothies.",
+    "price": 39.99,
+    "images": [
+      "https://picsum.photos/seed/blender/300/200",
+      "https://picsum.photos/seed/blender2/300/200"
+    ],
+    "category_id": 3,
+    "rating": 4.3,
+    "number_of_reviews": 370,
+    "sales_volume": 1400,
+    "stock_status": true,
+    "discount_percentage": 6,
+    "time_added": "2024-10-15T14:00:00",
+    "brand": "BlendPro",
+    "materials_used": "Plastic, Stainless steel",
+    "features": [
+      "Portable",
+      "Rechargeable",
+      "Compact"
+    ],
+    "tags": [
+      "kitchen",
+      "blender",
+      "portable"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.3,
+    "user_satisfaction_index": 86,
+    "manufacturer_details": "BlendPro Ltd.",
+    "views_count": 12000,
+    "CTR": 12,
+    "conversion_rate": 3.8,
+    "average_browsing_time": "2.7 mins",
+    "profit_margin": 25
+  },
+  {
+    "id": 23,
+    "name": "Canvas Art Print",
+    "description": "High-quality canvas art print for home decor.",
+    "price": 79.99,
+    "images": [
+      "https://picsum.photos/seed/art/300/200",
+      "https://picsum.photos/seed/art2/300/200"
+    ],
+    "category_id": 3,
+    "rating": 4.6,
+    "number_of_reviews": 270,
+    "sales_volume": 800,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-10-20T09:00:00",
+    "brand": "Artistry",
+    "materials_used": "Canvas, Ink",
+    "features": [
+      "Canvas print",
+      "High-quality",
+      "Decorative"
+    ],
+    "tags": [
+      "home",
+      "decor",
+      "art"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 0.8,
+    "user_satisfaction_index": 89,
+    "manufacturer_details": "Artistry Prints",
+    "views_count": 8000,
+    "CTR": 10,
+    "conversion_rate": 3.9,
+    "average_browsing_time": "2.5 mins",
+    "profit_margin": 20
+  },
+  {
+    "id": 24,
+    "name": "Electric Scooter",
+    "description": "Eco-friendly electric scooter with long battery life.",
+    "price": 299.99,
+    "images": [
+      "https://picsum.photos/seed/scooter/300/200",
+      "https://picsum.photos/seed/scooter2/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.7,
+    "number_of_reviews": 600,
+    "sales_volume": 1500,
+    "stock_status": true,
+    "discount_percentage": 15,
+    "time_added": "2024-10-25T11:00:00",
+    "brand": "EcoRide",
+    "materials_used": "Aluminum, Plastic",
+    "features": [
+      "Eco-friendly",
+      "Long battery life",
+      "High speed"
+    ],
+    "tags": [
+      "scooter",
+      "electric",
+      "transport"
+    ],
+    "warranty_period": "2 years",
+    "return_rate": 1.8,
+    "user_satisfaction_index": 92,
+    "manufacturer_details": "EcoRide Inc.",
+    "views_count": 18000,
+    "CTR": 12,
+    "conversion_rate": 4.3,
+    "average_browsing_time": "3.2 mins",
+    "profit_margin": 18
+  },
+  {
+    "id": 25,
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with adjustable DPI settings.",
+    "price": 29.99,
+    "images": [
+      "https://picsum.photos/seed/mouse/300/200",
+      "https://picsum.photos/seed/mouse2/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.4,
+    "number_of_reviews": 450,
+    "sales_volume": 2000,
+    "stock_status": true,
+    "discount_percentage": 5,
+    "time_added": "2024-11-01T10:00:00",
+    "brand": "ClickPro",
+    "materials_used": "Plastic",
+    "features": [
+      "Wireless",
+      "Adjustable DPI",
+      "Ergonomic"
+    ],
+    "tags": [
+      "electronics",
+      "mouse",
+      "wireless"
+    ],
+    "warranty_period": "6 months",
+    "return_rate": 2.0,
+    "user_satisfaction_index": 87,
+    "manufacturer_details": "ClickPro Tech",
+    "views_count": 14000,
+    "CTR": 11,
+    "conversion_rate": 3.8,
+    "average_browsing_time": "2.6 mins",
+    "profit_margin": 20
+  },
+  {
+    "id": 26,
+    "name": "Running Shoes",
+    "description": "Comfortable running shoes with excellent cushioning.",
+    "price": 89.99,
+    "images": [
+      "https://picsum.photos/seed/shoes/300/200",
+      "https://picsum.photos/seed/shoes2/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.8,
+    "number_of_reviews": 680,
+    "sales_volume": 2200,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-11-05T12:00:00",
+    "brand": "RunMaster",
+    "materials_used": "Mesh, Rubber",
+    "features": [
+      "Cushioning",
+      "Breathable",
+      "Durable"
+    ],
+    "tags": [
+      "shoes",
+      "running",
+      "fitness"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.0,
+    "user_satisfaction_index": 95,
+    "manufacturer_details": "RunMaster Corp.",
+    "views_count": 17000,
+    "CTR": 13,
+    "conversion_rate": 4.4,
+    "average_browsing_time": "2.9 mins",
+    "profit_margin": 22
+  },
+  {
+    "id": 27,
+    "name": "Digital Camera",
+    "description": "High-resolution digital camera with advanced features.",
+    "price": 499.99,
+    "images": [
+      "https://picsum.photos/seed/camera/300/200",
+      "https://picsum.photos/seed/camera2/300/200"
+    ],
+    "category_id": 1,
+    "rating": 4.7,
+    "number_of_reviews": 250,
+    "sales_volume": 500,
+    "stock_status": true,
+    "discount_percentage": 10,
+    "time_added": "2024-11-10T14:00:00",
+    "brand": "PhotoPro",
+    "materials_used": "Metal, Plastic",
+    "features": [
+      "High-resolution",
+      "Advanced features",
+      "Compact design"
+    ],
+    "tags": [
+      "camera",
+      "photography",
+      "digital"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.8,
+    "user_satisfaction_index": 92,
+    "manufacturer_details": "PhotoPro Inc.",
+    "views_count": 8000,
+    "CTR": 9,
+    "conversion_rate": 4.0,
+    "average_browsing_time": "3.2 mins",
+    "profit_margin": 16
+  },
+  {
+    "id": 28,
+    "name": "Scented Candles",
+    "description": "Assorted scented candles for home ambiance.",
+    "price": 14.99,
+    "images": [
+      "https://picsum.photos/seed/candles/300/200",
+      "https://picsum.photos/seed/candles2/300/200"
+    ],
+    "category_id": 4,
+    "rating": 4.3,
+    "number_of_reviews": 320,
+    "sales_volume": 1000,
+    "stock_status": true,
+    "discount_percentage": 5,
+    "time_added": "2024-11-15T10:00:00",
+    "brand": "ScentedLux",
+    "materials_used": "Wax, Fragrance",
+    "features": [
+      "Scented",
+      "Ambiance",
+      "Long-burning"
+    ],
+    "tags": [
+      "candles",
+      "home",
+      "scented"
+    ],
+    "warranty_period": "6 months",
+    "return_rate": 1.0,
+    "user_satisfaction_index": 88,
+    "manufacturer_details": "ScentedLux Co.",
+    "views_count": 10500,
+    "CTR": 10,
+    "conversion_rate": 3.9,
+    "average_browsing_time": "2.4 mins",
+    "profit_margin": 22
+  },
+  {
+    "id": 29,
+    "name": "Sports Watch",
+    "description": "Durable sports watch with multiple features for tracking workouts.",
+    "price": 79.99,
+    "images": [
+      "https://picsum.photos/seed/sports-watch/300/200",
+      "https://picsum.photos/seed/sports-watch2/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.5,
+    "number_of_reviews": 400,
+    "sales_volume": 1200,
+    "stock_status": true,
+    "discount_percentage": 7,
+    "time_added": "2024-11-20T12:00:00",
+    "brand": "TrackMaster",
+    "materials_used": "Rubber, Stainless steel",
+    "features": [
+      "Workout tracking",
+      "Durable",
+      "Water-resistant"
+    ],
+    "tags": [
+      "watch",
+      "sports",
+      "fitness"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.3,
+    "user_satisfaction_index": 89,
+    "manufacturer_details": "TrackMaster Ltd.",
+    "views_count": 13000,
+    "CTR": 12,
+    "conversion_rate": 4.0,
+    "average_browsing_time": "2.8 mins",
+    "profit_margin": 20
+  },
+  {
+    "id": 30,
+    "name": "Yoga Strap",
+    "description": "Adjustable yoga strap for improving flexibility.",
+    "price": 16.99,
+    "images": [
+      "https://picsum.photos/seed/strap/300/200",
+      "https://picsum.photos/seed/strap2/300/200"
+    ],
+    "category_id": 5,
+    "rating": 4.4,
+    "number_of_reviews": 290,
+    "sales_volume": 1000,
+    "stock_status": true,
+    "discount_percentage": 7,
+    "time_added": "2024-11-25T10:00:00",
+    "brand": "FlexYoga",
+    "materials_used": "Nylon",
+    "features": [
+      "Adjustable",
+      "Improves flexibility",
+      "Durable"
+    ],
+    "tags": [
+      "yoga",
+      "fitness",
+      "flexibility"
+    ],
+    "warranty_period": "1 year",
+    "return_rate": 1.2,
+    "user_satisfaction_index": 87,
+    "manufacturer_details": "FlexYoga Ltd.",
+    "views_count": 9500,
+    "CTR": 11,
+    "conversion_rate": 3.9,
+    "average_browsing_time": "2.5 mins",
+    "profit_margin": 23
+  }
+]

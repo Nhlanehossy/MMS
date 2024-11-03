@@ -1,0 +1,1239 @@
+[
+    {
+      "name": "users",
+      "icon": "fa fa-user",
+      "label": "Users",
+      "menuGroup": "User Management",
+      "menuGroupIcon": "fa fa-user-cog",
+      "schema": [
+        {
+          "name": "Image",
+          "title": "Profile Picture",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "fullname",
+          "title": "Full Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "title": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "phoneNumber",
+          "title": "Phone Number",
+          "type": "phone",
+          "required": true
+        },
+        {
+          "name": "password",
+          "title": "Password",
+          "type": "password",
+          "required": true
+        },
+        {
+          "name": "dateOfBirth",
+          "title": "Date Of Birth",
+          "type": "date"
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "gender",
+          "title": "Gender",
+          "type": "ref",
+          "resource": "genders",
+          "field": "gender"
+        },
+        {
+          "name": "role",
+          "title": "User Role",
+          "type": "ref",
+          "resource": "roles",
+          "field": "roleName"
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "guests",
+      "icon": "fa fa-user",
+      "label": "Guests",
+      "menuGroup": "User Management",
+      "menuGroupIcon": "fa fa-user-cog",
+      "schema": [
+        {
+          "name": "fullname",
+          "title": "Full Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "title": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "title": "Phone Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "address",
+          "title": "Address",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nationality",
+          "title": "Nationality",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "passportOrId",
+          "title": "Passport/ID Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nextOfKin",
+          "title": "Next of Kin",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "nextOfKinContact",
+          "title": "Next of Kin Contact",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "roles",
+      "icon": "fa fa-bookmark",
+      "label": "Roles",
+      "menuGroup": "Access Control",
+      "menuGroupIcon": "fa fa-user-shield",
+      "schema": [
+        {
+          "name": "roleName",
+          "title": "Role Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "modules",
+      "icon": "fa fa-cubes",
+      "label": "Modules",
+      "menuGroup": "Access Control",
+      "menuGroupIcon": "fa fa-user-shield",
+      "schema": [
+        {
+          "name": "moduleName",
+          "title": "Module Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+  
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "permissions",
+      "icon": "fa fa-user-shield",
+      "label": "Permissions",
+      "menuGroup": "Access Control",
+      "menuGroupIcon": "fa fa-user-shield",
+      "schema": [
+        {
+          "name": "role",
+          "title": "Role",
+          "type": "ref",
+          "resource": "roles",
+          "field": "roleName",
+          "required": true
+        },
+        {
+          "name": "module",
+          "title": "Module",
+          "type": "ref",
+          "resource": "modules",
+          "field": "moduleName",
+          "required": true
+        },
+        {
+          "name": "create",
+          "title": "Create",
+          "type": "check",
+          "required": true
+        },
+        {
+          "name": "read",
+          "title": "Read",
+          "type": "check",
+          "required": true
+        },
+        {
+          "name": "update",
+          "title": "Update",
+          "type": "check",
+          "required": true
+        },
+        {
+          "name": "delete",
+          "title": "Delete",
+          "type": "check",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+  
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "genders",
+      "icon": "fa fa-venus-mars",
+      "label": "Genders",
+      "menuGroup": "User Management",
+      "menuGroupIcon": "fa fa-user-cog",
+      "schema": [
+        {
+          "name": "gender",
+          "title": "Gender",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "icon",
+          "title": "Icon",
+          "type": "image",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "rooms",
+      "icon": "fa fa-bed",
+      "label": "Rooms",
+      "menuGroup": "Room Management",
+      "menuGroupIcon": "fa fa-hotel",
+      "schema": [
+        {
+          "name": "firstImage",
+          "title": "1st Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "secondImage",
+          "title": "2nd Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "thirdImage",
+          "title": "3rd Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "roomNumber",
+          "title": "Room Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "roomType",
+          "title": "Room Type",
+          "type": "ref",
+          "resource": "room-types",
+          "field": "typeName"
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "price",
+          "title": "Price",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "room-types",
+      "icon": "fa fa-tag",
+      "label": "Room Types",
+      "menuGroup": "Room Management",
+      "menuGroupIcon": "fa fa-hotel",
+      "schema": [
+        {
+          "name": "typeName",
+          "title": "Type",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "bookings",
+      "icon": "fa fa-calendar-alt",
+      "label": "bookings",
+      "menuGroup": "booking Management",
+      "menuGroupIcon": "fa fa-concierge-bell",
+      "schema": [
+        {
+          "name": "guest",
+          "title": "Guest",
+          "type": "ref",
+          "resource": "guests",
+          "field": "fullname"
+        },
+        {
+          "name": "room",
+          "title": "Room",
+          "type": "ref",
+          "resource": "rooms",
+          "field": "roomNumber"
+        },
+        {
+          "name": "checkInDate",
+          "title": "Check-In Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "checkOutDate",
+          "title": "Check-Out Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "status",
+          "title": "booking Status",
+          "type": "ref",
+          "resource": "booking-statuses",
+          "field": "statusName"
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "booking-statuses",
+      "icon": "fa fa-info-circle",
+      "label": "booking Statuses",
+      "menuGroup": "booking Management",
+      "menuGroupIcon": "fa fa-concierge-bell",
+      "schema": [
+        {
+          "name": "statusName",
+          "title": "Status Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "hotels",
+      "icon": "fa fa-hotel",
+      "label": "Hotels",
+      "menuGroup": "Hotel Management",
+      "menuGroupIcon": "fa fa-building",
+      "schema": [
+        {
+          "name": "name",
+          "title": "Hotel Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "address",
+          "title": "Address",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "city",
+          "title": "City",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "country",
+          "title": "Country",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "logo",
+          "title": "Logo",
+          "type": "image",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "amenities",
+      "icon": "fa fa-spa",
+      "label": "Hotel Amenities",
+      "menuGroup": "Hotel Management",
+      "menuGroupIcon": "fa fa-building",
+      "schema": [
+        {
+          "name": "name",
+          "title": "Amenity Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "icon",
+          "title": "Icon",
+          "type": "image",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "room-amenities",
+      "icon": "fa fa-link",
+      "label": "Room Amenities",
+      "menuGroup": "Room Management",
+      "menuGroupIcon": "fa fa-hotel",
+      "schema": [
+        {
+          "name": "room",
+          "title": "Room",
+          "type": "ref",
+          "resource": "rooms",
+          "field": "roomNumber",
+          "required": true
+        },
+        {
+          "name": "amenity",
+          "title": "Amenity",
+          "type": "ref",
+          "resource": "amenities",
+          "field": "name",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "hotel-rooms-mappings",
+      "icon": "fa fa-link",
+      "label": "Hotel rooms Mapping",
+      "menuGroup": "Hotel Management",
+      "menuGroupIcon": "fa fa-building",
+      "schema": [
+        {
+          "name": "hotel",
+          "title": "Hotel",
+          "type": "ref",
+          "resource": "hotels",
+          "field": "name",
+          "required": true
+        },
+        {
+          "name": "amenity",
+          "title": "Amenity",
+          "type": "ref",
+          "resource": "amenities",
+          "field": "name",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "services",
+      "icon": "fa fa-concierge-bell",
+      "label": "Services",
+      "menuGroup": "Hotel Management",
+      "menuGroupIcon": "fa fa-hotel",
+      "schema": [
+        {
+          "name":"icon",
+          "title":"service icon",
+          "type":"image",
+          "required":true
+        },
+        {
+          "name": "serviceName",
+          "title": "Service Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "price",
+          "title": "Price",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "email-addresses",
+      "icon": "fa fa-envelope",
+      "label": "Email Addresses",
+      "menuGroup": "Contact Information",
+      "menuGroupIcon": "fa fa-address-book",
+      "schema": [
+        {
+          "name": "emailAddress",
+          "title": "Email Address",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "emailType",
+          "title": "Email Type",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": false
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "phone-numbers",
+      "icon": "fa fa-phone",
+      "label": "Phone Numbers",
+      "menuGroup": "Contact Information",
+      "menuGroupIcon": "fa fa-address-book",
+      "schema": [
+        {
+          "name": "phoneNumber",
+          "title": "Phone Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "phoneType",
+          "title": "Phone Type",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": false
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "food_orders",
+      "icon": "fa fa-clipboard-list",
+      "label": "Orders",
+      "menuGroup": "Restaurant",
+      "menuGroupIcon": "fa-solid fa-utensils",
+      "schema": [
+        {
+          "name": "customer",
+          "title": "Customer",
+          "type": "ref",
+          "resource": "guests",
+          "field": "fullname",
+          "required": true
+        },
+        {
+          "name": "orderItems",
+          "title": "Order Items",
+          "type": "ref",
+          "resource": "menu_items",
+          "field": "itemName",
+          "required": true
+        },
+        {
+          "name": "orderDate",
+          "title": "Order Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "totalAmount",
+          "title": "Total Amount",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "food_menus",
+      "icon": "fa fa-book-open",
+      "label": "Menus",
+      "menuGroup": "Restaurant",
+      "menuGroupIcon": "fa-solid fa-utensils",
+      "schema": [
+        {
+          "name": "menuName",
+          "title": "Menu Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "menu_items",
+      "icon": "fa fa-burger",
+      "label": "Menu Items",
+      "menuGroup": "Restaurant",
+      "menuGroupIcon": "fa-solid fa-utensils",
+      "schema": [
+        {
+          "name": "itemName",
+          "title": "Item Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "price",
+          "title": "Price",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "image",
+          "title": "Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "menu",
+          "title": "Menu",
+          "type": "ref",
+          "resource": "food_menus",
+          "field": "menuName",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "inventory",
+      "icon": "fa fa-boxes",
+      "label": "Inventory",
+      "menuGroup": "Restaurant",
+      "menuGroupIcon": "fa-solid fa-utensils",
+      "schema": [
+        {
+          "name": "itemName",
+          "title": "Item Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "quantity",
+          "title": "Quantity",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "unit",
+          "title": "Unit",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "tables",
+      "icon": "fa fa-chair",
+      "label": "Tables",
+      "menuGroup": "Restaurant",
+      "menuGroupIcon": "fa-solid fa-utensils",
+      "schema": [
+        {
+          "name": "tableNumber",
+          "title": "Table Number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "capacity",
+          "title": "Capacity",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": false
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "table-reservations",
+      "icon": "fa fa-calendar-plus",
+      "label": "Table Reservations",
+      "menuGroup": "Restaurant",
+      "menuGroupIcon": "fa-solid fa-utensils",
+      "schema": [
+        {
+          "name": "customer",
+          "title": "Customer",
+          "type": "ref",
+          "resource": "guests",
+          "field": "fullname",
+          "required": true
+        },
+        {
+          "name": "table",
+          "title": "Table",
+          "type": "ref",
+          "resource": "tables",
+          "field": "tableNumber",
+          "required": true
+        },
+        {
+          "name": "reservationDate",
+          "title": "Reservation Date",
+          "type": "date",
+          "required": true
+        },
+        {
+          "name": "reservationTime",
+          "title": "Reservation Time",
+          "type": "time",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "posts",
+      "icon": "fa fa-file-alt",
+      "label": "Posts",
+      "menuGroup": "Content Management",
+      "menuGroupIcon": "fa fa-pen-nib",
+      "schema": [
+        {
+          "name": "thumbnail",
+          "title": "Thumbnail",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "title",
+          "title": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "content",
+          "title": "Content",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "category",
+          "title": "Category",
+          "type": "ref",
+          "resource": "post-categories",
+          "field": "name"
+        },
+        {
+          "name": "author",
+          "title": "Author",
+          "type": "ref",
+          "resource": "users",
+          "field": "fullname"
+        },
+        {
+          "name": "publishDate",
+          "title": "Publish Date",
+          "type": "date",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "comments",
+      "icon": "fa fa-comments",
+      "label": "Comments",
+      "menuGroup": "Content Management",
+      "menuGroupIcon": "fa fa-pen-nib",
+      "schema": [
+        {
+          "name": "post",
+          "title": "Post",
+          "type": "ref",
+          "resource": "posts",
+          "field": "title",
+          "required": true
+        },
+        {
+          "name": "author",
+          "title": "Author",
+          "type": "ref",
+          "resource": "users",
+          "field": "fullname"
+        },
+        {
+          "name": "content",
+          "title": "Content",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "createdAt",
+          "title": "Created At",
+          "type": "date",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "post-categories",
+      "icon": "fa fa-folder",
+      "label": "Blog Post Categories",
+      "menuGroup": "Content Management",
+      "menuGroupIcon": "fa fa-pen-nib",
+      "schema": [
+        {
+          "name": "name",
+          "title": "Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "slides",
+      "icon": "fa fa-bookmark",
+      "label": "Slide show",
+      "menuGroup": "Content Management",
+      "menuGroupIcon": "fa fa-pen-nib",
+      "schema": [
+        {
+          "name": "image",
+          "title": "Slide Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "title",
+          "title": "Title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "weblinks",
+      "icon": "fa fa-chain",
+      "label": "Web links",
+      "menuGroup": "Content Management",
+      "menuGroupIcon": "fa fa-pen-nib",
+      "schema": [
+
+        {
+          "name": "name",
+          "title": "Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "path",
+          "title": "Path",
+          "type": "text",
+          "required": true
+        }
+      ],
+      "renderMode": "crud",
+      "actions": [
+        { "view": "goToView" },
+        { "edit": "goToEdit" },
+        { "delete": "deleteResource" }
+      ]
+    },
+    {
+      "name": "company-config",
+      "icon": "fa fa-building",
+      "label": "Company Configuration",
+      "menuGroup": "Settings",
+      "menuGroupIcon": "fa fa-cog",
+      "schema": [
+        {
+          "name": "logo",
+          "title": "Company Logo",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "companyName",
+          "title": "Company Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "companyAddress",
+          "title": "Company Address",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "companyLocation",
+          "title": "Location",
+          "type": "richtext",
+          "required": true
+        },
+        {
+          "name": "companyMotto",
+          "title": "Motto",
+          "type": "richtext",
+          "required": true
+        }
+      ],
+      "renderMode": "singleton"
+    },
+    {
+      "name": "system-config",
+      "icon": "fa fa-cog",
+      "label": "System Configuration",
+      "menuGroup": "Settings",
+      "menuGroupIcon": "fa fa-wrench",
+      "schema": [
+        {
+          "name": "logo",
+          "title": "System Logo",
+          "type": "image"
+        },
+        {
+          "name": "appName",
+          "title": "Application Name",
+          "type": "text"
+        },
+        {
+          "name": "appVersion",
+          "title": "Application Version",
+          "type": "text"
+        },
+        {
+          "name": "maintenanceMode",
+          "title": "Maintenance Mode",
+          "type": "check"
+        },
+        {
+          "name": "maintenanceMessage",
+          "title": "Maintenance Message",
+          "type": "richtext"
+        }
+      ],
+      "renderMode": "singleton"
+    },
+    {
+      "name": "profile",
+      "icon": "fa fa-user-cog",
+      "label": "Account Settings",
+      "menuGroup": "Account Settings",
+      "menuGroupIcon": "fa fa-user-cog",
+      "schema": [
+        {
+          "image": "Image",
+          "title": "Profile Picture",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "fullname",
+          "title": "Full Name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "title": "Email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "phoneNumber",
+          "title": "Phone Number",
+          "type": "phone",
+          "required": true
+        },
+        {
+          "name": "password",
+          "title": "Password",
+          "type": "password",
+          "required": true
+        },
+        {
+          "name": "dateOfBirth",
+          "title": "Date Of Birth",
+          "type": "date"
+        },
+        {
+          "name": "description",
+          "title": "Description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "role",
+          "title": "User Role",
+          "type": "ref",
+          "resource": "roles",
+          "field": "roleName"
+        }
+      ],
+      "renderMode": "singleton",
+      "singletonType": "profile"
+    }
+  ]
