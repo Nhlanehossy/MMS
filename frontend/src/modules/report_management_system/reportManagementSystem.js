@@ -227,13 +227,13 @@ export const report_management_system = [
     schema: [
       {
         name: "faultName",
-        title: translationKeys.FaultName,
+        title: "fault name",
         type: "text",
         validation: Yup.string().required("Fault Name is required."),
       },
       {
         name: "faultType",
-        title: translationKeys.FaultType,
+        title: "Type",
         type: "select",
         options: [
           { label: "Electrical", value: "electrical" },
