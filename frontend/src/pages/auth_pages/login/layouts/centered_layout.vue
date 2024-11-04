@@ -66,13 +66,6 @@
           </button>
         </div>
       </form>
-      <p v-if="error" class="mt-2 text-center text-sm text-red-600">
-        {{ error }}
-      </p>
-      <p class="mt-2 text-center text-sm text-gray-600">
-        Don't have an account? 
-        <a href="/register" class="font-medium text-primary hover:text-webSecondary">Sign up</a> <!-- Added Sign Up link -->
-      </p>
 
     </div>
     </div>
