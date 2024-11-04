@@ -314,80 +314,8 @@ export const report_management_system = [
     renderMode: "crud",
     crudType: "list",
   },
-
-  {
-    name: "caretakers",
-    path: "caretakers",
-    icon: "pi pi-user",
-    label: translationKeys.Caretakers || "Caretakers",
-    menuGroup: translationKeys.ReportManagement,
-    menuGroupIcon: "pi pi-folder",
-    resourceGroup: translationKeys.ReportManagementSystem || "Report Management",
-    schema: [
-      {
-        name: "fullName",
-        title: translationKeys.FullName || "Full Name",
-        type: "text",
-        validation: Yup.string().required("Full Name is required."),
-      },
-      {
-        name: "email",
-        title: translationKeys.Email || "Email",
-        type: "email",
-        validation: Yup.string()
-          .email("Invalid email format")
-          .required("Email is required."),
-      },
-      {
-        name: "phone",
-        title: translationKeys.Phone || "Phone",
-        type: "text",
-        validation: Yup.string().required("Phone number is required."),
-      },
-      {
-        name: "specialization",
-        title: translationKeys.Specialization || "Specialization",
-        type: "select",
-        options: [
-          { label: "Electrical", value: "electrical" },
-          { label: "Mechanical", value: "mechanical" },
-          { label: "Plumbing", value: "plumbing" },
-          { label: "General Maintenance", value: "general" },
-          { label: "Other", value: "other" },
-        ],
-        validation: Yup.string().required("Specialization is required."),
-      },
-      {
-        name: "assignedLocations",
-        title: translationKeys.AssignedLocations || "Assigned Locations",
-        type: "tags",
-        tagInputType: "refs",
-        resource: "locations",
-        field: "locationName",
-        validation: Yup.array().min(1, "At least one location must be assigned."),
-      },
-      {
-        name: "status",
-        title: translationKeys.Status || "Status",
-        type: "select",
-        options: [
-          { label: "Active", value: "active", color: "#008000" },
-          { label: "On Leave", value: "onLeave", color: "#FFD700" },
-          { label: "Inactive", value: "inactive", color: "#FF6347" },
-        ],
-        validation: Yup.string().required("Status is required."),
-      },
-      {
-        name: "notes",
-        title: translationKeys.Notes || "Notes",
-        type: "richtext",
-      },
-    ],
-    renderMode: "crud",
-    crudType: "table",
-  },
-
-];
+  
+]
  // ... previous resources remain the sam
   
 
