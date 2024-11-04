@@ -385,9 +385,9 @@ export const report_management_system = [
     ],
     renderMode: "crud",
     crudType: "table",
-  }
+  },
 
-]
+];
  // ... previous resources remain the sam
   
 
