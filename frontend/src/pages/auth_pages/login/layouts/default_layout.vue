@@ -61,12 +61,7 @@
             </label>
           </div>
 
-          <div class="text-sm">
-            <a href="/forgot-password" class="font-medium text-secondary hover:text-tertiary">
-              Forgot password?
-            </a>
           </div>
-        </div>
 
         <div>
           <button
