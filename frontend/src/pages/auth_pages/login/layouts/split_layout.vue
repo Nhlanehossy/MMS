@@ -39,7 +39,7 @@
               </div>
             </div>
 
-            <!-- Remember Me & Forgot Password -->
+             <!-- Remember Me & Forgot Password 
             <div class="flex items-center justify-between">
               <div class="flex items-center">
                 <input id="remember-me" name="remember-me" type="checkbox"
@@ -54,7 +54,7 @@
                   Forgot password?
                 </a>
               </div>
-            </div>
+            </div> -->
 
             <!-- Sign In Button -->
             <div>
