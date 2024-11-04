@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="flex items-center justify-between">
+        <!-- <div class="flex items-center justify-between">
           <div class="flex items-center">
             <input id="remember-me" name="remember-me" type="checkbox"
               class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
@@ -55,8 +55,8 @@
               Forgot your password?
             </a>
           </div>
-        </div>
-        <div>
+        </div>-->
+        <div> 
           <button type="submit" :disabled="isLoggingIn"
             class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-webSecondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <span class="absolute left-0 inset-y-0 flex items-center pl-3">
@@ -66,14 +66,14 @@
           </button>
         </div>
       </form>
-      <p v-if="error" class="mt-2 text-center text-sm text-red-600">
+      <!-- <p v-if="error" class="mt-2 text-center text-sm text-red-600">
         {{ error }}
       </p>
       <p class="mt-2 text-center text-sm text-gray-600">
         Don't have an account? 
         <a href="/register" class="font-medium text-primary hover:text-webSecondary">Sign up</a> <!-- Added Sign Up link -->
       </p>
-
+ -->
     </div>
     </div>
   </div>
