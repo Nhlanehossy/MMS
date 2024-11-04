@@ -181,5 +181,58 @@ exports.report_management_system = [
       crudType: "table"
     },
   
+
+    {
+      name: "caretakers",
+      path: "caretakers",
+      icon: "pi pi-user",
+      schema: [
+        {
+          name: "fullName",
+          type: "text",
+        },
+        {
+          name: "email",
+          type: "email",
+        },
+        {
+          name: "phone",
+          type: "text",
+        },
+        {
+          name: "specialization",
+          type: "select",
+          options: [
+            { label: "Electrical", value: "electrical" },
+            { label: "Mechanical", value: "mechanical" },
+            { label: "Plumbing", value: "plumbing" },
+            { label: "General Maintenance", value: "general" },
+            { label: "Other", value: "other" },
+          ],
+        },
+        {
+          name: "assignedLocations",
+          type: "tags",
+          tagInputType: "refs",
+          resource: "locations",
+          field: "locationName",
+        },
+        {
+          name: "status",
+          type: "select",
+          options: [
+            { label: "Active", value: "active", color: "#008000" },
+            { label: "On Leave", value: "onLeave", color: "#FFD700" },
+            { label: "Inactive", value: "inactive", color: "#FF6347" },
+          ],
+        },
+        {
+          name: "notes",
+          type: "richtext",
+        },
+      ],
+      renderMode: "crud",
+      crudType: "table"
+    },
   
   ];
