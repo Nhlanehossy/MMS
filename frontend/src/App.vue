@@ -28,7 +28,7 @@ export default {
       try {
         await this.fetchAppConfig();  // Fetch app configuration (e.g., title, favicon)
       } catch (error) {
-        console.error("Error initializing app:", error);
+        console.warn("Using default app configuration:", error.message);
       } finally {
         this.loading = false;
       }
@@ -37,9 +37,17 @@ export default {
     // Fetch application configuration (e.g., title, logo) and update the page metadata
     async fetchAppConfig() {
       const response = await fetch(`${import.meta.env.VITE_APP_API_URL}/api/v1/system-config`);
+      if (!response.ok) {
+        throw new Error(`System configuration request failed with status ${response.status}`);
+      }
       const data = await response.json();
-      document.title = data.data[0].appName;
-      document.querySelector('link[rel="icon"]').href = data.data[0].logo;
+      const config = data.data?.[0];
+      if (!config) return;
+      document.title = config.appName || document.title;
+      const favicon = document.querySelector('link[rel="icon"]');
+      if (favicon && config.logo) {
+        favicon.href = config.logo;
+      }
     }
   },
 
@@ -56,9 +64,11 @@ export default {
 
 <template>
   <Loader v-if="loading" />
-  <a-config-provider v-else :theme="themeManager.antDesignTheme">
-    <main>
-      <router-view></router-view>
-    </main>
-  </a-config-provider>
+  <router-view v-else v-slot="{ Component }">
+    <a-config-provider :theme="themeManager.antDesignTheme">
+      <main>
+        <component :is="Component" />
+      </main>
+    </a-config-provider>
+  </router-view>
 </template>

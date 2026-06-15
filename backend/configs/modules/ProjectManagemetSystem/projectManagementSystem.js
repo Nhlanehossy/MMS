@@ -415,8 +415,8 @@ exports.construction_tracking_system = [
     }
 },
 {
-    name: "reports",
-    path: "reports",
+    name: "construction-reports",
+    path: "construction-reports",
     icon: "pi pi-calendar",
     menuGroupIcon: "pi pi-briefcase",
     renderMode: "crud",

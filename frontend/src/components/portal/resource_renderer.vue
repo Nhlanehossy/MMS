@@ -98,7 +98,8 @@ export default {
     },
     customFilters: {
       type: Object,
-      required: true,
+      required: false,
+      default: () => ({}),
     },
     showbreadcrumbs: {
       type: Boolean,

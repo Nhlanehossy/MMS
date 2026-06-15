@@ -35,7 +35,7 @@ app.use(GridLayout)
 app.use(Antd);
 app.use(MasonryWall);
 app.use(HighchartsVue);
-app.use(QuillEditor);
+app.component('QuillEditor', QuillEditor);
 app.use(LightGallery);
 app.use(VCalendar, {})
 app.component('downloadCsv', JsonCSV)

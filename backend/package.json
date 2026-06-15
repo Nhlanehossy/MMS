@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "nodemon app.js",
-    "init-backend": "node setup/init-system.js"
+    "init-backend": "node setup/init-system.js",
+    "seed": "node setup/seed-system.js"
   },
   "keywords": [],
   "author": "",

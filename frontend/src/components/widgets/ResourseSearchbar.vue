@@ -49,7 +49,7 @@
   
                 <!-- Search Results list -->
                 <div v-else-if="filteredResults.length > 0" class="w-full">
-                  <a-list v-infinite-scroll="loadMore" item-layout="horizontal" :data-source="displayedResults"
+                  <a-list item-layout="horizontal" :data-source="displayedResults"
                     :loading="loading">
                     <template #renderItem="{ item }">
                       <a-list-item @click="handleItemClick(item)" class="search-result-item" style="width: 100%">

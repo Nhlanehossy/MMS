@@ -653,8 +653,8 @@ export const construction_tracking_system = [
 
 
     {
-      name: "reports",
-      path: "reports",
+      name: "construction-reports",
+      path: "construction-reports",
       icon: "pi pi-file",
       label: "Daily Reports",
   

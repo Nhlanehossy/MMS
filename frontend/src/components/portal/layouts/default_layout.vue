@@ -388,8 +388,7 @@ watch(() => route.path, (path) => {
         </transition>
       </div>
 
-      <transition name="slide-fade">
-        <a-drawer v-model:visible="profileDrawerOpen" :closable="false" placement="right" :width="450"
+      <a-drawer v-model:visible="profileDrawerOpen" :closable="false" placement="right" :width="450"
           class="profile-drawer border-l border-textLighter">
           <div class="profile-content">
             <div class="profile-header">
@@ -440,8 +439,7 @@ watch(() => route.path, (path) => {
               </a-button>
             </div>
           </div>
-        </a-drawer>
-      </transition>
+      </a-drawer>
     </div>
     <!-- Overlay for mobile -->
     <div v-if="sidebarOpen && isMobile" class="fixed inset-0 bg-black bg-opacity-50 " @click="toggleSidebar">

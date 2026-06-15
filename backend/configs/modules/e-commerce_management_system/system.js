@@ -128,6 +128,20 @@ exports.e_commerce_management_system = [
     ],
   },
   {
+    name: "tags",
+    path: "tags",
+    schema: [
+      {
+        name: "icon",
+        type: "icon",
+      },
+      {
+        name: "tagName",
+        type: "text",
+      },
+    ],
+  },
+  {
     name: "orders",
     path: "orders",
     schema: [

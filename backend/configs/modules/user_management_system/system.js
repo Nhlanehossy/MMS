@@ -343,7 +343,7 @@ exports.user_management_system = [
         title: "Recipient",
         type:'ref',
         resource: "users",
-        field: "fullName"
+        field: "fullname"
       }
     ]
   }

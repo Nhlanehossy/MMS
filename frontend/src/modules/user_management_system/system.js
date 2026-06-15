@@ -190,6 +190,11 @@ export const user_management_system = [
         type: "richtext",
         validation: Yup.string().required("Description is required."),
       },
+      {
+        name: "icon",
+        title: translationKeys.Icon || "Icon",
+        type: "image",
+      },
     ],
     renderMode: "crud",
     actions: [
@@ -448,6 +453,47 @@ export const user_management_system = [
   },
 
   {
+    name: "extra-actions",
+    path: "extra-actions",
+    icon: "fa fa-bolt",
+    label: translationKeys.ExtraActions || "Extra Actions",
+    menuGroup: translationKeys.AccessControl,
+    menuGroupIcon: "fa fa-shield",
+    resourceGroup: translationKeys.UserManagementSystem || "User Management",
+    schema: [
+      {
+        name: "icon",
+        title: translationKeys.Icon || "Icon",
+        type: "icon",
+      },
+      {
+        name: "label",
+        title: translationKeys.Label || "Label",
+        type: "text",
+        validation: Yup.string().required("Label is required."),
+      },
+      {
+        name: "name",
+        title: translationKeys.Name || "Name",
+        type: "text",
+        validation: Yup.string().required("Name is required."),
+      },
+      {
+        name: "description",
+        title: translationKeys.Description,
+        type: "richtext",
+      },
+    ],
+    renderMode: "crud",
+    crudType: "table",
+    actions: [
+      { view: "goToView" },
+      { edit: "goToEdit" },
+      { delete: "deleteResource" },
+    ],
+  },
+
+  {
     name: "permissions",
     path: "permissions",
     icon: "fa fa-shield", // Replaced "fa fa-user-shield"
@@ -495,6 +541,14 @@ export const user_management_system = [
         title: translationKeys.Delete,
         type: "check",
         validation: Yup.string().required("required."),
+      },
+      {
+        name: "extraActions",
+        title: translationKeys.ExtraActions || "Extra Actions",
+        type: "tags",
+        tagInputType: "refs",
+        resource: "extra-actions",
+        field: "name",
       },
     ],
     renderMode: "crud",
@@ -555,6 +609,35 @@ export const user_management_system = [
         },
       ],
     },
+  },
+
+  {
+    name: "activity-log",
+    path: "activity-log",
+    icon: "fa fa-history",
+    label: translationKeys.ActivityLog || "Activity Log",
+    menuGroup: translationKeys.System || "System",
+    menuGroupIcon: "fa fa-shield",
+    resourceGroup: translationKeys.UserManagementSystem || "User Management",
+    schema: [
+      {
+        name: "action",
+        title: translationKeys.Action || "Action",
+        type: "text",
+        validation: Yup.string().required("Action is required."),
+      },
+      {
+        name: "description",
+        title: translationKeys.Description,
+        type: "richtext",
+      },
+    ],
+    renderMode: "crud",
+    crudType: "table",
+    actions: [
+      { view: "goToView" },
+      { edit: "goToEdit" },
+    ],
   },
 
 ];

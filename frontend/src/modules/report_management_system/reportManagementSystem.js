@@ -60,6 +60,7 @@ export const report_management_system = [
         options: [
           { label: "Open", value: "open", color: "#FFD700" },
           { label: "In Progress", value: "inProgress", color: "#007ACC" },
+          { label: "Closed", value: "closed", color: "#475569" },
           { label: "Resolved", value: "resolved", color: "#008000" },
           { label: "Cancelled", value: "cancelled", color: "#FF6347" },
         ],
@@ -133,6 +134,7 @@ export const report_management_system = [
         options: [
           { label: "Open", value: "open", color: "#FFD700" },
           { label: "In Progress", value: "inProgress", color: "#007ACC" },
+          { label: "Closed", value: "closed", color: "#475569" },
           { label: "Resolved", value: "resolved", color: "#008000" },
           { label: "Cancelled", value: "cancelled", color: "#FF6347" },
         ],

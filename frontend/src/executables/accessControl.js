@@ -28,7 +28,7 @@ export async function getFilteredResources(roleId) {
 
     // Filter and modify resources
     const filteredResources = Resources.filter(resource => {
-      const moduleId = modules.find(m => m.moduleName === resource.path)?.id;
+      const moduleId = modules.find(m => m.moduleName === resource.path || m.moduleName === resource.name)?.id;
       if (!moduleId) return false;
 
       const permission = rolePermissions.find(p => p.module === moduleId);

@@ -1,0 +1,8 @@
+allowBuilds:
+  '@ckeditor/ckeditor5-vue': true
+  '@parcel/watcher': true
+  core-js: true
+  esbuild: true
+  protobufjs: true
+  swiper: true
+  vue-demi: true

@@ -47,6 +47,7 @@ exports.report_management_system = [
           type: "select",
           options: [
             { label: "Open", value: "open", color: "#FFD700" },
+            { label: "In Progress", value: "inProgress", color: "#007ACC" },
             { label: "Closed", value: "closed", color: "#007ACC" },
             { label: "Resolved", value: "resolved", color: "#008000" },
             { label: "Cancelled", value: "cancelled", color: "#FF6347" },
@@ -139,7 +140,14 @@ exports.report_management_system = [
           name: "report",
           type: "ref",
           resource: "reports",
-          field: "reportTitle",
+          field: "faults",
+        },
+
+        {
+          name: "location",
+          type: "ref",
+          resource: "locations",
+          field: "locationName",
         },
         
         {

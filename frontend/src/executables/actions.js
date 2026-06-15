@@ -328,6 +328,243 @@ const resourceFunctions = [
     },
   },
   {
+    name: "AssignFault",
+    icon: "fa fa-user-plus",
+    key: "assignFault",
+    value: async (payload) => {
+      const { id, data } = payload;
+      const confirmation = await Swal.fire({
+        title: "Assign report?",
+        text: "This will mark the report as in progress.",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Assign",
+      });
+
+      if (!confirmation.isConfirmed) return "Assignment canceled";
+
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/reports/${id}`, {
+        status: "inProgress",
+      });
+
+      if (data?.email) {
+        await effects.sendEmail({
+          subject: "Fault report assigned",
+          recipientEmail: data.email,
+          message: "Your fault report has been assigned and is now in progress.",
+        });
+      }
+
+      await Swal.fire({
+        title: "Assigned",
+        text: "Fault report moved to in progress.",
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      window.location.reload();
+      return "Fault report assigned";
+    },
+  },
+  {
+    name: "StartWork",
+    icon: "fa fa-play",
+    key: "startWork",
+    value: async (payload) => {
+      const { id } = payload;
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/allocations/${id}`, {
+        status: "open",
+      });
+      await Swal.fire({
+        title: "Started",
+        text: "Allocation marked as open.",
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      window.location.reload();
+      return "Allocation started";
+    },
+  },
+  {
+    name: "ResolveFault",
+    icon: "fa fa-check",
+    key: "resolveFault",
+    value: async (payload) => {
+      const { resource, id, data } = payload;
+      const confirmation = await Swal.fire({
+        title: "Resolve item?",
+        text: "This will mark the current fault workflow item as resolved or completed.",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Resolve",
+      });
+
+      if (!confirmation.isConfirmed) return "Resolve canceled";
+
+      const status = resource === "allocations" ? "completed" : "resolved";
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/${resource}/${id}`, { status });
+
+      if (data?.email) {
+        await effects.sendEmail({
+          subject: "Fault report resolved",
+          recipientEmail: data.email,
+          message: "Your fault report has been resolved.",
+        });
+      }
+
+      await Swal.fire({
+        title: "Resolved",
+        text: `Item marked as ${status}.`,
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      window.location.reload();
+      return "Fault workflow item resolved";
+    },
+  },
+  {
+    name: "CloseReport",
+    icon: "fa fa-lock",
+    key: "closeReport",
+    value: async (payload) => {
+      const { id } = payload;
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/reports/${id}`, {
+        status: "closed",
+      });
+      await Swal.fire({
+        title: "Closed",
+        text: "Fault report closed.",
+        icon: "success",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+      window.location.reload();
+      return "Fault report closed";
+    },
+  },
+  {
+    name: "ProcessOrder",
+    icon: "fa fa-cogs",
+    key: "processOrder",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/orders/${id}`, { status: "processing" });
+      toast.success("Order moved to processing");
+      window.location.reload();
+    },
+  },
+  {
+    name: "ShipOrder",
+    icon: "fa fa-truck",
+    key: "shipOrder",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/orders/${id}`, { status: "shipped" });
+      toast.success("Order marked as shipped");
+      window.location.reload();
+    },
+  },
+  {
+    name: "DeliverOrder",
+    icon: "fa fa-box-open",
+    key: "deliverOrder",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/orders/${id}`, { status: "delivered" });
+      toast.success("Order marked as delivered");
+      window.location.reload();
+    },
+  },
+  {
+    name: "CompletePayment",
+    icon: "fa fa-check-circle",
+    key: "completePayment",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/payments/${id}`, { status: "completed" });
+      toast.success("Payment completed");
+      window.location.reload();
+    },
+  },
+  {
+    name: "RefundPayment",
+    icon: "fa fa-undo",
+    key: "refundPayment",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/payments/${id}`, { status: "refunded" });
+      toast.success("Payment refunded");
+      window.location.reload();
+    },
+  },
+  {
+    name: "ReviewClaim",
+    icon: "fa fa-search",
+    key: "reviewClaim",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/claims/${id}`, { status: "under_review" });
+      toast.success("Claim moved to review");
+      window.location.reload();
+    },
+  },
+  {
+    name: "PayClaim",
+    icon: "fa fa-money-bill",
+    key: "payClaim",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/claims/${id}`, { status: "paid" });
+      toast.success("Claim marked as paid");
+      window.location.reload();
+    },
+  },
+  {
+    name: "CloseClaim",
+    icon: "fa fa-lock",
+    key: "closeClaim",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/claims/${id}`, { status: "closed" });
+      toast.success("Claim closed");
+      window.location.reload();
+    },
+  },
+  {
+    name: "StartTask",
+    icon: "fa fa-play",
+    key: "startTask",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/tasks/${id}`, { status: "inProgress" });
+      toast.success("Task started");
+      window.location.reload();
+    },
+  },
+  {
+    name: "CompleteTask",
+    icon: "fa fa-check",
+    key: "completeTask",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/tasks/${id}`, { status: "completed" });
+      toast.success("Task completed");
+      window.location.reload();
+    },
+  },
+  {
+    name: "ApproveInquiry",
+    icon: "fa fa-thumbs-up",
+    key: "approveInquiry",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/material_inquiries/${id}`, { status: "approved" });
+      toast.success("Material inquiry approved");
+      window.location.reload();
+    },
+  },
+  {
+    name: "DeclineInquiry",
+    icon: "fa fa-thumbs-down",
+    key: "declineInquiry",
+    value: async ({ id }) => {
+      await axios.patch(`${import.meta.env.VITE_APP_API_URL}/api/v1/material_inquiries/${id}`, { status: "declined" });
+      toast.success("Material inquiry declined");
+      window.location.reload();
+    },
+  },
+  {
     name: "ResetPassword",
     icon: "fa fa-key",
     key: "ResetPassword",
@@ -404,7 +641,7 @@ const resourceFunctions = [
         if (approval.isConfirmed) {
           const response = await axios.patch(
             `${import.meta.env.VITE_APP_API_URL}/api/v1/claims/${id}`,
-            { status: "Approved" }
+            { status: "approved" }
           );
 
           const claimant = await helpers.getResource({
@@ -462,7 +699,7 @@ const resourceFunctions = [
         if (rejection.isConfirmed) {
           const response = await axios.patch(
             `${import.meta.env.VITE_APP_API_URL}/api/v1/claims/${id}`,
-            { status: "Rejected" }
+            { status: "rejected" }
           );
 
           const claimant = await helpers.getResource({
